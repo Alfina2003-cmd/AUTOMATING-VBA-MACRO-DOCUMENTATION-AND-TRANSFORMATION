@@ -1,0 +1,42 @@
+Code:
+
+Private Sub CommandButton1_Click()
+Worksheets("Sheet1").Cells(3, 1).Value = TextBox.Text
+
+If OptionButton1.Value = True Then
+Worksheets("Sheet1").Cells(3, 2).Value = "Male"
+End If
+
+If OptionButton2.Value = True Then
+Worksheets("Sheet1").Cells(3, 2).Value = "Female"
+End If
+
+If CheckBox1.Value = True Then
+Worksheets("Sheet1").Cells(3, 3).Value = "Yes"
+End If
+
+If CheckBox2.Value = True Then
+Worksheets("Sheet1").Cells(3, 4).Value = "Yes"
+End If
+
+
+Worksheets("Sheet1").Cells(3, 5).Value = ListBox1.Value
+
+End Sub
+
+Private Sub CommandButton2_Click()
+Unload UserForm1
+End Sub
+
+
+
+Private Sub UserForm_Initialize()
+ListBox1.AddItem "Hockey"
+ListBox1.AddItem "Tennis"
+ListBox1.AddItem "Football"
+ListBox1.AddItem "Cricket"
+ListBox1.AddItem "Badminton"
+
+End Sub
+
+
